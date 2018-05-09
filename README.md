@@ -1,7 +1,6 @@
-# sass-boilerplate
-This is a very basic starting point for new web projects. It takes no assumptions about your tech stack and there is no binding to any javascript frameworks or backend systems.
+# Accessibility Component Library
 
-The boilerplate includes gulp, sass, sourcemaps, autoprefixer, breakpoint and browsersync. And nothing else.
+This has been built from a sass boilerplate that includes gulp, sass, sourcemaps, autoprefixer, breakpoint and browsersync. And nothing else.
 
 ## Requirements
 
@@ -9,8 +8,6 @@ The boilerplate includes gulp, sass, sourcemaps, autoprefixer, breakpoint and br
 
 ## Quickstart
 ```bash
-$ git clone https://github.com/olefredrik/sass-boilerplate.git
-$ cd sass-boilerplate
 $ npm install
 $ gulp
 ```
