@@ -1,0 +1,42 @@
+$black: #000000;
+$white: #ffffff;
+$offwhite: rgb(233, 233, 233);
+$grey: rgb(91, 91, 91);
+$grey-pale: rgb(196, 196, 196);
+$grey-light: rgb(119, 119, 119);
+$grey-dark: rgb(7, 7, 7);
+
+// colours
+$teal: #43A1A3;
+$teal-dark: #168381;
+$red: #d62f2f;
+
+
+$blue: rgb(96, 245, 255);
+$blue-dark: #3E7AB1;
+$green: rgb(173, 236, 57);
+$green-dark: #008A02;
+$pink: rgb(247, 0, 198);
+$pink-dark: rgb(247, 0, 135);
+$orange: rgb(255, 124, 0);
+$orange-dark: rgb(255, 80, 0);
+$purple: rgb(148, 98, 238);
+$purple-dark: rgb(93, 90, 251);
+// $red: rgb(255, 0, 45);
+$red-dark: rgb(254, 0, 107);
+$yellow: rgb(255, 198, 8);
+$yellow-dark: rgb(245, 166, 35);
+
+
+
+$accent-color: $blue-dark;
+$success-color: $green-dark;
+$error-color: $red;
+
+
+// RESPONSIVE BREAKPOINTS
+$xs: '350px';
+$sm: '576px';
+$md: '768px';
+$lg: '991px';
+$xl: '1200px';

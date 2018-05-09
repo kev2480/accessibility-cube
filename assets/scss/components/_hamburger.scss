@@ -1,0 +1,95 @@
+.c-hamburger {
+  position: relative;
+
+  a {
+    text-decoration: none;
+  }
+
+    // background: #015289;
+    margin: 50px 0;
+    border-top: 6px solid $accent-color;
+    line-height: 1.6;
+    box-shadow: 5px 5px 10px 0px #a9b2bb;
+    padding: 1em;
+    color: $black;
+
+    a {
+      color: inherit;
+    }
+
+  h1 {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+  }
+
+  button {
+    position: absolute;
+    right: 1em;
+    top: 0.8em;
+    padding: 8px;
+    border: 2px solid $accent-color;
+    border-radius: 5px;
+    font-size: 1em;
+    background: transparent;
+    color: $accent-color;
+    display: none;
+
+    &:focus,
+    &:hover {
+      background: $accent-color;
+      color: $white;
+      cursor: pointer;
+    }
+  }
+
+  nav {
+    border-top: 1px solid transparentize(#fff, 0.4);
+    padding: 1em 1em 0;
+
+    li {
+      margin-bottom: 1em;
+    }
+
+    a {
+      display: block;
+    }
+  }
+
+  ul {
+    display: none;
+  }
+
+  button {
+    display: block;
+  }
+
+  ul.is-active {
+    display: block;
+  }
+}
+
+@media (min-width: 700px) {
+  .c-hamburger {
+    ul {
+      display: block;
+    }
+
+    button {
+      display: none;
+    }
+
+    button {
+      display: none;
+    }
+
+    nav {
+      padding-left: 0;
+
+      li {
+        display: inline-block;
+        margin-right: 1em;
+      }
+    }
+  }
+}

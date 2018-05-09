@@ -1,0 +1,16 @@
+html {
+  font-family: $font-family-sans-serif;
+}
+
+a {
+  color: $accent-color;
+
+  &:focus,
+  &:hover {
+    color: $accent-color;
+  }
+}
+
+hr {
+  margin: 40px 0;
+}

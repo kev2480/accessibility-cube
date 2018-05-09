@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>3SC Component Library</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="Basic Sass Boilerplate" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	  <link href="assets/css/app.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="assets/js/index.js"></script>
+</head>
+<body>
+
+  <header role=”banner” class="main-header">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <a class="skip-link" id="skip-to-content" href="#content">skip to main content</a>
+
+          <h1>3SC Component Library</h1>
+        </div>
+
+        <!-- <nav role="navigation" class="col">
+          <ul class="list-inline">
+          	<li class="list-inline-item"><a class="main-header__links" href="…">Home</a></li>
+          	<li class="list-inline-item"><a class="main-header__links" href="…">Link 1</a></li>
+          	<li class="list-inline-item"><a class="main-header__links" href="…">Link 2</a></li>
+          	<li class="list-inline-item"><a class="main-header__links" href="…">Link 3</a></li>
+          	<li class="list-inline-item"><a class="main-header__links" href="…">Link 4</a></li>
+          </ul>
+        </nav> -->
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <aside role="complementary" class="col-sm-4">
+        Quick Links:
+        <a class="d-block" href="#form">Form</a>
+        <a class="d-block" href="#accordion">Accordion</a>
+        <a class="d-block" href="#skip-link">Skip Link</a>
+        <a class="d-block" href="#page">Modal</a>
+        <a class="d-block" href="#tabbed-content">Tabbed Content</a>
+        <a class="d-block" href="#carousel">Carousel</a>
+        <a class="d-block" href="#navigation">Navigation</a>
+      </aside>
+
+      <main class="container col-sm-8" id="content" role=”main”>
+
+        <section>
+
+          <pre>
+            $(function() {
+
+              // helper function to place modal window as the first child
+              // of the #page node
+              var m = document.getElementById('modal_window'),
+                  p = document.getElementById('page');
+
+              function swap () {
+                p.parentNode.insertBefore(m, p);
+              }
+
+              swap();
+
+
+              // modal window
+              (function() {
+
+                'use strict';
+
+                // list out the vars
+                var mOverlay = getId('modal_window'),
+                    mOpen = getId('modal_open'),
+                    mClose = getId('modal_close'),
+                    modal = getId('modal_holder'),
+                    allNodes = document.querySelectorAll("*"),
+                    modalOpen = false,
+                    lastFocus,
+                    i;
+
+
+                // Let's cut down on what we need to type to get an ID
+                function getId ( id ) {
+                  return document.getElementById(id);
+                }
+
+
+                // Let's open the modal
+                function modalShow () {
+                  lastFocus = document.activeElement;
+                  mOverlay.setAttribute('aria-hidden', 'false');
+                  modalOpen = true;
+                  modal.setAttribute('tabindex', '0');
+                  modal.focus();
+                }
+
+
+                // binds to both the button click and the escape key to close the modal window
+                // but only if modalOpen is set to true
+                function modalClose ( event ) {
+                  if (modalOpen && ( !event.keyCode || event.keyCode === 27 ) ) {
+                    mOverlay.setAttribute('aria-hidden', 'true');
+                    modal.setAttribute('tabindex', '-1');
+                    modalOpen = false;
+                    lastFocus.focus();
+                  }
+                }
+
+
+                // Restrict focus to the modal window when it's open.
+                // Tabbing will just loop through the whole modal.
+                // Shift + Tab will allow backup to the top of the modal,
+                // and then stop.
+                function focusRestrict ( event ) {
+                  if ( modalOpen && !modal.contains( event.target ) ) {
+                    event.stopPropagation();
+                    modal.focus();
+                  }
+                }
+
+
+                // Close modal window by clicking on the overlay
+                mOverlay.addEventListener('click', function( e ) {
+                  if (e.target == modal.parentNode) {
+                     modalClose( e );
+                   }
+                }, false);
+
+
+                // open modal by btn click/hit
+                mOpen.addEventListener('click', modalShow);
+
+                // close modal by btn click/hit
+                mClose.addEventListener('click', modalClose);
+
+                // close modal by keydown, but only if modal is open
+                document.addEventListener('keydown', modalClose);
+
+                // restrict tab focus on elements only inside modal window
+                for (i = 0; i < allNodes.length; i++) {
+                  allNodes.item(i).addEventListener('focus', focusRestrict);
+                }
+
+              })();
+
+            })
+          </pre>
+
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

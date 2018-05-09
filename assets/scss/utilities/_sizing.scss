@@ -1,0 +1,21 @@
+.u-w-100vw {
+  width: 100vw;
+}
+
+.u-top-header-padding {
+  padding-top: 85px;
+
+  @media (max-width: $sm) {
+    padding-top: 65px;
+  }
+}
+
+.u-blog-padding {
+  padding-left: 100px;
+  padding-right: 100px;
+
+  @media (max-width: $md) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

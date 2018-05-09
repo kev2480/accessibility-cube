@@ -1,0 +1,98 @@
+.form {
+
+  &__radio {
+    &:focus,
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__row {
+    position: relative;
+
+    &.has-success {
+      &:before {
+        content: '\f00c';
+        color: $success-color;
+      }
+    }
+    &.has-error {
+      &:before {
+        content: '\f00d';
+        color: $error-color;
+      }
+    }
+
+    &:before {
+      font-family: FontAwesome;
+      font-size: 20px;
+      position: absolute;
+      right: 0;
+      top: 32px;
+    }
+  }
+
+  &__error {
+    display: none;
+    color: $error-color;
+  }
+
+  &__select {
+    display: block;
+    width: 100%;
+    border-style: solid;
+
+    &.has-success {
+      border-color: $success-color;
+    }
+    &.has-error {
+      border-color: $error-color;
+
+      + .form__error {
+        display: block;
+      }
+    }
+
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    padding-right: 20px;
+    border-style: solid;
+    border-right: transparent;
+    border-left: transparent;
+    border-top: transparent;
+    border-bottom-color: #d0d0d0;
+    transition: 0.3s border ease-in-out;
+
+    &.has-success {
+      border-bottom-color: $success-color;
+    }
+    &.has-error {
+      border-bottom-color: $error-color;
+
+      + .form__error {
+        display: block;
+      }
+    }
+
+    &:focus {
+      border-bottom-color: #7d7d7d;
+      outline: none;
+    }
+  }
+
+  &__label {
+    display: block;
+
+    &.has-success {
+    }
+    &.has-error {}
+
+    &:focus,
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

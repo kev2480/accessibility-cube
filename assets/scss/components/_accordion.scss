@@ -1,0 +1,60 @@
+
+.accordion {
+  margin: 50px 0;
+  border-top: 6px solid $accent-color;
+  line-height: 1.6;
+  box-shadow: 5px 5px 10px 0px #a9b2bb;
+
+  &__item {
+    border-bottom: 1px solid #dce7eb;
+  }
+
+  &__title {
+    padding: 15px 15px 15px 40px;
+    display: block;
+    position: relative;
+    font-weight: 400;
+
+    &:before {
+      font-family: FontAwesome;
+      content: "\f055";
+      font-size: 20px;
+      position: absolute;
+      left: 15px;
+      top: 12px;
+      color: $accent-color;
+    }
+
+    h3 {
+      border-bottom: 1px solid #fefffa;
+      display:inline-block;
+    }
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      outline: none;
+      h3 {
+        border-bottom-color: #a8bdc4;
+        display:inline-block;
+      }
+    }
+
+    .is-expanded & {
+      &:before {
+        content: "\f056";
+      }
+
+    }
+  }
+
+    &__content-inner {
+        padding: 0 40px 10px 40px;
+    }
+
+  &__content {
+    transition: height 0.3s ease-out;
+    height: 0;
+    overflow: hidden;
+  }
+}

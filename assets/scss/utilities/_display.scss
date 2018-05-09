@@ -1,0 +1,11 @@
+.u-d-block {
+  display: block;
+}
+
+.u-d-inline {
+  display: inline-block;
+}
+
+.u-visually-hidden {
+  @include visually-hidden();
+}

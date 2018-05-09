@@ -1,0 +1,37 @@
+.o-grid {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 280px 2fr;
+  grid-template-areas: "intro intro"
+                       "sidebar content";
+
+  @media screen and (max-width: $md) {
+    grid-template-columns: 100%;
+
+    grid-template-areas: "intro"
+                         "sidebar"
+                         "content";
+  }
+}
+
+.o-grid-full-width {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 100%;
+  grid-template-areas: "header";
+}
+
+.o-grid-intro {
+  grid-area: intro;
+}
+.o-grid-header {
+  grid-area: header;
+}
+
+.o-grid-content {
+  grid-area: content;
+}
+
+.o-grid-sidebar {
+  grid-area: sidebar;
+}

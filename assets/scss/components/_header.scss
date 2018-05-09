@@ -1,0 +1,33 @@
+.main-header {
+  padding: 60px 0 20px;
+  margin-bottom: 100px;
+  background-color: $teal;
+  color: white;
+  position: relative;
+  z-index: 1;
+
+  &:after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    display: block;
+    background-color: $teal;
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    -webkit-transform: skewY(-3.5deg);
+    transform: skewY(-3.5deg);
+    -webkit-transform-origin: 100%;
+    transform-origin: 100%;
+  }
+
+  &__links {
+    color: inherit;
+
+    &:hover,
+    &:active {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+}

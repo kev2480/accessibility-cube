@@ -1,0 +1,33 @@
+.c-sidebar {
+
+  &__item {
+
+  }
+
+  &__inner {
+    padding-right: 60px;
+
+    @media screen and (max-width: $md) {
+      padding-right: 0;
+    }
+  }
+
+  &__link {
+    padding: 10px;
+    color: $grey;
+    border-right: 1px solid $offwhite;
+    background-color: $white;
+    transition: 0.3s background-color ease-in-out;
+
+    @media screen and (max-width: $md) {
+      border-right: none;
+      border-bottom: 1px solid $offwhite;
+    }
+
+    &:hover,
+    &:focus {
+      color: $grey;
+      background-color: #f7f7f7;
+    }
+  }
+}

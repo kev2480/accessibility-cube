@@ -1,0 +1,14 @@
+.c-button {
+  background-color: $accent-color;
+  color: $white;
+  padding: 10px 15px;
+  border: 2px solid $accent-color;
+
+  &:focus,
+  &:hover {
+    background-color: $white;
+    color: $accent-color;
+    cursor: pointer;
+    outline: none;
+  }
+}

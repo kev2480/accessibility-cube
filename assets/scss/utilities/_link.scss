@@ -1,0 +1,20 @@
+.u-styled-link {
+  color: $white;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+.u-link-no-underline {
+  color: $white;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    outline: none;
+  }
+}

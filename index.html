@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>3SC Component Library</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="Basic Sass Boilerplate" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	  <link href="assets/css/app.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/182774/modernizr_copy.js"></script>
+    <script type="text/javascript" src="assets/js/sticky-sidebar.js"></script>
+    <script src="assets/js/index.js"></script>
+
+</head>
+<body>
+  <div class="o-grid-full-width">
+    <header role=”banner” class="main-header o-grid-header">
+      <div class="container">
+        <a class="skip-link" id="skip-to-content" href="#content">skip to main content</a>
+
+        <h1>3SC Accessibility Library</h1>
+      </div>
+    </header>
+  </div>
+
+  <div class="o-grid container">
+    <div class="o-grid-intro">
+        <div class="mb-5">
+          <p>
+            This is the 3SC component library - all the below components have been built with accessibility in mind.
+            The plan for this is to be a constantly evolving piece of work, so feel free to modify and add new components.
+          </p>
+        </div>
+      </div>
+
+    <aside role="complementary" class="c-sidebar o-grid-sidebar sidebar">
+          <div class="c-sidebar__inner">
+            <h2>Quick Links:</h2>
+            <a class="d-block c-sidebar__link" href="#form">Form</a>
+            <a class="d-block c-sidebar__link" href="#accordion">Accordion</a>
+            <a class="d-block c-sidebar__link" href="#skip-link">Skip Link</a>
+            <a class="d-block c-sidebar__link" href="#page">Modal</a>
+            <a class="d-block c-sidebar__link" href="#tabbed-content">Tabbed Content</a>
+            <a class="d-block c-sidebar__link" href="#carousel">Carousel</a>
+            <a class="d-block c-sidebar__link" href="#navigation">Navigation</a>
+            <a class="d-block c-sidebar__link pl-5" href="#mega-menu">Menu Menu</a>
+            <a class="d-block c-sidebar__link pl-5" href="#hamburger">Hamburger</a>
+            <a class="d-block c-sidebar__link" href="#focus-within">:focus-within</a>
+          </div>
+        </aside>
+
+    <main class="o-grid-content " id="content" role=”main”>
+
+      <section id="form">
+        <h2>Form Example</h2>
+
+        <p>
+          Forms can be very difficult to understand if the mark-up isn't semantic and the labels don't give enough context.
+          Make sure that labels are set and that fieldsets and legends are being used to group related form items, this is
+          particularly important with checkbox and radio inputs.
+          With error and success states, try to avoid relying on just colour to convey meaning - in the form below the colour is paired with iconography and text.
+        </p>
+        <p>
+          <i>Note: I have used FontAwesome because I didn't have any assets, icon fonts can be an accessibility no-no because of how they render with screen readers:
+          <a href="https://www.filamentgroup.com/lab/bulletproof_icon_fonts.html">Further information about icon fonts</a>
+          </i>
+        </p>
+
+        <a href="https://accessibility.blog.gov.uk/2016/07/22/using-the-fieldset-and-legend-elements/" target="_blank" class="mb-4 d-block">Further reading about accessible forms</a>
+
+        <form role=”form”>
+          <fieldset>
+            <legend>Example order form</legend>
+              <fieldset>
+                <legend>Your details</legend>
+                <div class="d-block mb-4">
+                  <label for="title" class="form__label">Title</label>
+                  <select id="title" name="title" class="form__select">
+                    <option value="" disabled>Please select</option>
+                    <option value="Ms">Ms</option>
+                    <option value="Miss">Miss</option>
+                    <option value="Mrs">Mrs</option>
+                    <option value="Mr">Mr</option>
+                  </select>
+                  <p class="form__error">
+                    Please check the above form input
+                  </p>
+                </div>
+
+                <div class="d-block form__row has-error mb-4">
+                  <label for="fName" class="form__label">First Name</label>
+                  <input id="fName" type="text" name="fName" placeholder="First Name" class="form__input has-error"/>
+                  <p class="form__error">
+                    Please check the above form input
+                  </p>
+                </div>
+
+                <div class="d-block form__row has-success mb-4">
+                  <label for="sName" class="form__label">Last Name</label>
+                  <input id="sName" type="text" name="sName" placeholder="Last Name" class="form__input has-success"/>
+                  <p class="form__error">
+                    Please check the above form input
+                  </p>
+                </div>
+
+                <div class="d-block form__row mb-4">
+                  <label for="email" class="form__label">Email</label>
+                  <input id="email" type="email" name="email" placeholder="Email Address" class="form__input"/>
+                  <p class="form__error">
+                    Please check the above form input
+                  </p>
+                </div>
+              </fieldset>
+
+              <fieldset class="mb-4">
+                <legend>Food order</legend>
+                <div class="d-flex">
+                  <div class="d-block mr-4">
+                    <label for="aNum2" class="form__label">Option 1</label>
+                    <input id="aNum2" type="radio" name="order" class="form__radio"/>
+                  </div>
+
+                  <div class="d-block">
+                    <label for="eDate" class="form__label">Option 2</label>
+                    <input id="eDate" type="radio" name="order" class="form__radio"/>
+                  </div>
+                </div>
+
+                <p class="form__error">
+                  Please check the above form input
+                </p>
+              </fieldset>
+           </fieldset>
+
+           <button type="submit" class="c-button">Submit</button>
+        </form>
+      </section>
+
+      <hr />
+
+      <section id="accordion">
+        <h2>Accordion</h2>
+
+        <p>
+          Accordions can be tricky for some users who may use screen readers or assisstive tech to navigate websites.
+          By design, accordion content is hidden and requires users to click to reveal the content. If an accordion isn't
+          built with accessibility in mind, it can be difficult for users to know it's an accordion or they may know it's an
+          accordion but be unable to interact with it.
+        </p>
+
+        <section class="accordion" role="tablist" aria-live="polite" data-behavior="accordion">
+
+          <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+            <span id="tab1" tabindex="0" class="accordion__title" aria-controls="panel1" role="tab" aria-selected="false" aria-expanded="false" data-binding="expand-accordion-trigger">
+              <h3 class="u-h5">Use the tab key to navigate...</h3>
+            </span>
+
+            <div id="panel1" class="accordion__content" role="tabpanel" aria-hidden="true" aria-labelledby="tab1" data-binding="expand-accordion-container">
+              <div class="accordion__content-inner">
+                <p>You can cycle through all the different accordion items through tabbing.</p>
+              </div>
+            </div>
+
+          </article>
+
+          <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+            <span id="tab2" tabindex="0" class="accordion__title" aria-controls="panel2" role="tab" aria-selected="false" aria-expanded="false" data-binding="expand-accordion-trigger">
+              <h3 class="u-h5">Or, you can use your mouse.</h3>
+            </span>
+
+            <div id="panel2" class="accordion__content" role="tabpanel" aria-hidden="true" aria-labelledby="tab2" data-binding="expand-accordion-container">
+              <div class="accordion__content-inner">
+                <p>This accordion can be used by both mouse and keyboard-only users.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+            <span id="tab3" tabindex="0" class="accordion__title" aria-controls="panel3" role="tab" aria-selected="false" aria-expanded="false" data-binding="expand-accordion-trigger">
+              <h3 class="u-h5">Click here to view more</h3>
+            </span>
+
+            <div id="panel3" class="accordion__content" role="tabpanel" aria-hidden="true" aria-labelledby="tab3" data-binding="expand-accordion-container">
+              <div class="accordion__content-inner">
+                <p>You can also use either the space bar or enter key to expand/collapse these panels.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+            <span id="tab4" tabindex="0" class="accordion__title" aria-controls="panel4" role="tab" aria-selected="false" aria-expanded="false" data-binding="expand-accordion-trigger">
+              <h3 class="u-h5">ARIA</h3>
+            </span>
+
+            <div id="panel4" class="accordion__content" role="tabpanel" aria-hidden="true" aria-labelledby="tab4" data-binding="expand-accordion-container">
+              <div class="accordion__content-inner">
+                <p>This accordion makes use of ARIA tags which help aid accessibility.</p>
+              </div>
+            </div>
+          </article>
+
+        </section>
+      </section>
+
+      <hr />
+
+      <section class="position-relative" id="skip-link">
+        <h2>Skip link</h2>
+
+        <p>
+          There is an example at the very top of this page and underneath this text.
+          The skip link can only be seen when it's focused on so will only be used screen readers
+          or those using assisstive devices.
+        </p>
+        <a class="skip-link" id="skip-to-content" href="#content">skip to top</a>
+      </section>
+
+      <hr />
+
+      <section id="tabbed-content">
+        <h2>Tabbed content</h2>
+
+        <p>
+          Like accordions, tabs can be frustrating for many users.
+        </p>
+
+        <div id="tabs">
+            <ul>
+                <li><a href="#tab-1">Tab 1</a></li>
+                <li><a href="#tab-2">Tab 2</a></li>
+                <li><a href="#tab-3">Tab 3</a></li>
+            </ul>
+            <div>
+                <h2 id="tab-1">Tab 1</h2>
+                <p>
+                  tab 1 content
+                </p>
+            </div>
+            <div>
+                <h2 id="tab-2">Tab 2</h2>
+                <p>
+                  tab 2 content
+                </p>
+            </div>
+            <div>
+                <h2 id="tab-3">Tab 3</h2>
+                <p>
+                  tab 3 content
+                </p>
+            </div>
+        </div>
+
+      </section>
+
+      <hr />
+
+      <section id="page">
+        <h2>Modal</h2>
+
+        <p>
+          Modals can be problematic for some users.
+          Can be confusing, sometimes the content can't be accessed by the screenreader
+          The below example saves the users last focus from before the modal is opened and automatically focuses inside the modal.
+          When the modal is closed, the focus is returned to the last focused point, this prevents users from losing their place on the page.
+          The below modal also restricts users from tabbing outside of the modal whilst it is active, this is to prevent keyboard only users
+          accidentally from tabbing out of the modal without realising.
+        </p>
+        <button class="c-button" type="button" id="modal_open">Open the Modal</button>
+
+
+        <div class="modal-overlay" id="modal_window"
+                     aria-hidden="true" role="dialog"
+                     aria-labelledby="modal_title">
+
+          <div class="modal-content" id="modal_holder" role="document">
+
+              <h1 id="modal_title">Modal Title</h1>
+              <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" class="form__input mb-4" placeholder="Enter your name" />
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" class="form__input mb-4" placeholder="Enter your email" />
+
+                <input type="submit" class='c-button' value="Submit Form" />
+              </form>
+
+            <button class="btn-close" id="modal_close" type="button" aria-label="close modal">
+              &times;
+            </button>
+
+          </div>
+
+        </div>
+
+        <a href="modal-source.html" class="d-block mt-4">View modal source</a>
+      </section>
+
+      <hr />
+
+      <section class="position-relative" id="carousel">
+        <h2>Carousel</h2>
+
+        <p>
+          There's many articles out there that suggest to not use carousels due to accessibility concerns.
+          If you really need a carousel, then Slick Carousel is a good example of an accessible carousel - whilst it's not perfect it's pretty close.
+        </p>
+      </section>
+
+      <hr />
+
+      <section id="navigation">
+        <h2>Navigation</h2>
+
+        <p>
+          Navigation info
+        </p>
+
+        <nav role="navigation">
+          <ul class="list-inline">
+            <li class="list-inline-item"><a class="main-header__links" href="#">Home</a></li>
+            <li class="list-inline-item"><a class="main-header__links" href="#">About Us</a></li>
+            <li class="list-inline-item"><a class="main-header__links" href="#">Examples</a></li>
+            <li class="list-inline-item"><a class="main-header__links" href="#">Another example</a></li>
+            <li class="list-inline-item"><a class="main-header__links" href="#">Yet another example</a></li>
+          </ul>
+        </nav>
+
+        <h3 id="#mega-menu">Mega Menu</h3>
+
+        <nav role="navigation">
+          <ul class="list-inline">
+            <li class="list-inline-item"><a class="main-header__links" href="…">Home</a></li>
+            <li class="list-inline-item">
+              <a class="main-header__links" href="#">About Us</a>
+              <ul class="list-inline">
+                <li class="list-inline-item"><a class="main-header__links" href="#">sub menu</a></li>
+                <li class="list-inline-item"><a class="main-header__links" href="#">sub menu link</a></li>
+              </ul>
+            </li>
+            <li class="list-inline-item"><a class="main-header__links" href="#">Examples</a></li>
+            <li class="list-inline-item"><a class="main-header__links" href="#">Another example</a></li>
+            <li class="list-inline-item"><a class="main-header__links" href="#">Yet another example</a></li>
+          </ul>
+        </nav>
+
+        <h3 id="hamburger">Hamburger Nav</h3>
+
+        <p>
+          Below is an example of a responsive, accessible hamburger nav.
+        </p>
+
+        <header class="c-hamburger">
+          <h1>
+            <a href="#">Logo</a>
+          </h1>
+
+          <nav role="navigation">
+            <button id="toggleHamburger" aria-expanded="false">Menu</button>
+            <ul id="hammenu">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Works</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </nav>
+        </header>
+      </section>
+
+      <hr />
+
+      <section id="focus-within">
+        <h2>:focus-within</h2>
+
+        <p>
+          Focus within hasn't got full browser support as of now (May 2018), so should be used either as a progressive enhancement
+          or with a polyfill. The example below shows the form being styled with a blue border when the child input is focused.
+          This can have loads of potential user case such as on drop down navigation menus and data tables.
+        </p>
+
+        <a href="https://caniuse.com/#feat=css-focus-within" target="_blank" class="d-block mb-3">https://caniuse.com/#feat=css-focus-within</a>
+        <a href="https://github.com/scottaohara/css-focus-within-demos" target="_blank" class="d-block mb-3">Focus-Within demos on GitHub</a>
+        <form class="c-focus-within__form">
+          <label class="c-focus-within__label" for="focus">Focus within example</label>
+          <input type="text" class="c-focus-within__input" id="focus" name="focus" placeholder="Focus this input"/>
+        </form>
+
+      </section>
+
+      <hr />
+    </main>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+/* ==========================================================================
+   #HEADINGS
+   ========================================================================== */
+
+/**
+ * Redefine all of our basic heading styles against utility classes so as to
+ * allow for double stranded heading hierarchy, e.g. we semantically need an H2,
+ * but we want it to be sized like an H1:
+ *
+ *   <h2 class="u-h1"></h2>
+ *
+ */
+
+.u-h1-large {
+ @include inuit-font-size($inuit-font-size-h1-large, $important: true);
+ @media screen and (max-width: $sm) {
+   @include inuit-font-size(30px, $important: true);
+ }
+
+ @include landscapeMobile {
+   @include inuit-font-size(20px, $important: true);
+ }
+}
+
+.u-h1 {
+  @include inuit-font-size($inuit-font-size-h1, $important: true);
+}
+
+.u-h2 {
+  @include inuit-font-size($inuit-font-size-h2, $important: true);
+}
+
+.u-h3 {
+  @include inuit-font-size($inuit-font-size-h3, $important: true);
+}
+
+.u-h4 {
+  @include inuit-font-size($inuit-font-size-h4, $important: true);
+}
+
+.u-h5 {
+  @include inuit-font-size($inuit-font-size-h5, $important: true);
+}
+
+.u-h6 {
+  @include inuit-font-size($inuit-font-size-h6, $important: true);
+}
+
+.u-body {
+  @include inuit-font-size($inuit-global-font-size, $important: true);
+  font-weight: normal;
+}

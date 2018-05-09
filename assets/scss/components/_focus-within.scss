@@ -1,0 +1,26 @@
+.c-focus-within {
+  &__form {
+    &:focus-within {
+      outline: 2px solid $accent-color;
+    }
+  }
+
+  &__label {}
+
+  &__input {
+    display: block;
+    width: 100%;
+    padding-right: 20px;
+    border-style: solid;
+    border-right: transparent;
+    border-left: transparent;
+    border-top: transparent;
+    border-bottom-color: #d0d0d0;
+    transition: 0.3s border ease-in-out;
+
+    &:focus {
+      border-bottom-color: #7d7d7d;
+      outline: none;
+    }
+  }
+}

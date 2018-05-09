@@ -1,0 +1,15 @@
+.u-alt-font {
+  font-family: $font-family-highlight;
+}
+
+.u-bold {
+  font-weight: bold;
+}
+
+.u-italic {
+  font-style: italic;
+}
+
+.u-font-tiny {
+  @include inuit-font-size(10px);
+}
