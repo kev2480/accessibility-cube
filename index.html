@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	  <link href="assets/css/app.css" rel="stylesheet" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/182774/modernizr_copy.js"></script>
     <script type="text/javascript" src="assets/js/sticky-sidebar.js"></script>
+    <script type="text/javascript" src="assets/js/adobe-mega-menu.js"></script>
     <script src="assets/js/index.js"></script>
 
 </head>
@@ -29,7 +30,7 @@
   <div class="o-grid container">
     <div class="o-grid-intro">
         <div class="mb-5">
-          <p>
+          <p class="u-h4">
             This is the 3SC component library - all the below components have been built with accessibility in mind.
             The plan for this is to be a constantly evolving piece of work, so feel free to modify and add new components.
           </p>
@@ -42,11 +43,11 @@
             <a class="d-block c-sidebar__link" href="#form">Form</a>
             <a class="d-block c-sidebar__link" href="#accordion">Accordion</a>
             <a class="d-block c-sidebar__link" href="#skip-link">Skip Link</a>
-            <a class="d-block c-sidebar__link" href="#page">Modal</a>
             <a class="d-block c-sidebar__link" href="#tabbed-content">Tabbed Content</a>
+            <a class="d-block c-sidebar__link" href="#page">Modal</a>
             <a class="d-block c-sidebar__link" href="#carousel">Carousel</a>
             <a class="d-block c-sidebar__link" href="#navigation">Navigation</a>
-            <a class="d-block c-sidebar__link pl-4" href="#mega-menu">Menu Menu</a>
+            <a class="d-block c-sidebar__link pl-4" href="#mega-menu">Mega Menu</a>
             <a class="d-block c-sidebar__link pl-4" href="#hamburger">Hamburger</a>
             <a class="d-block c-sidebar__link" href="#focus-within">:focus-within</a>
             <a class="d-block c-sidebar__link" href="#breadcrumb">Breadcrumb</a>
@@ -226,7 +227,7 @@
         <h2>Tabbed content</h2>
 
         <p>
-          Like accordions, tabs can be frustrating for many users.
+          Like accordions, tabs can be frustrating for many users. The below example uses semantic mark-up and aria tags to help aid those who use assistive tech and/or screen readers.
         </p>
 
         <div id="tabs">
@@ -318,7 +319,7 @@
         <h2>Navigation</h2>
 
         <p>
-          Navigation info
+          The key thing with standard navigation menus is to ensure that you are using semantic mark-up.
         </p>
 
         <nav role="navigation" class="c-nav">
@@ -335,23 +336,103 @@
 
         <p>
           Mega menus can be frustating for many at the best of times, let alone if you rely on an assistive device to browse the web.
+          The below example is using the Adobe guide: <a href="https://github.com/adobe-accessibility/Accessible-Mega-Menu/" target="_blank">Adobe Accessible Mega Menu on GitHub</a>
         </p>
 
-        <nav role="navigation" class="c-mega-menu">
+        <!-- <nav role="navigation" class="c-mega-menu">
           <ul class="list-inline pl-0 mb-0">
             <li class="list-inline-item"><a class="main-header__links" href="…">Home</a></li>
             <li class="list-inline-item">
               <a class="main-header__links" href="#">About Us</a>
-              <ul class="list-inline">
-                <li class="list-inline-item"><a class="main-header__links" href="#">sub menu</a></li>
-                <li class="list-inline-item"><a class="main-header__links" href="#">sub menu link</a></li>
-              </ul>
+              <div class="c-mega-menu__sub-nav">
+                <ul class="list-inline">
+                  <li class="list-inline-item"><a class="main-header__links" href="#">sub menu</a></li>
+                  <li class="list-inline-item"><a class="main-header__links" href="#">sub menu link</a></li>
+                </ul>
+              </div>
             </li>
             <li class="list-inline-item"><a class="main-header__links" href="#">Examples</a></li>
             <li class="list-inline-item"><a class="main-header__links" href="#">Another example</a></li>
             <li class="list-inline-item"><a class="main-header__links" href="#">Yet another example</a></li>
           </ul>
-        </nav>
+        </nav> -->
+        <nav id="dawgdrops" class="c-mega-menu">
+            <ul class="nav-menu">
+              <li class="nav-item">
+                <a href="somepage.html">About</a>
+                <div class="sub-nav">
+                  <ul class="sub-nav-group">
+                    <li><a href="somepage.html">Accessibility</a></li>
+                    <li><a href="somepage.html">Admissions</a></li>
+                    <li><a href="somepage.html">Diversity</a></li>
+                    <li><a href="somepage.html">Governance</a></li>
+                  </ul>
+                  <ul class="sub-nav-group">
+                    <li><a href="somepage.html">Leadership</a></li>
+                    <li><a href="somepage.html">Mission Statement</a></li>
+                    <li><a href="somepage.html">Research</a></li>
+                    <li><a href="somepage.html">Teaching</a></li>
+                    <li><a href="somepage.html">Accessibility</a></li>
+                    <li><a href="somepage.html">Admissions</a></li>
+                    <li><a href="somepage.html">Diversity</a></li>
+                    <li><a href="somepage.html">Governance</a></li>
+                    <li><a href="somepage.html">Accessibility</a></li>
+                    <li><a href="somepage.html">Admissions</a></li>
+                    <li><a href="somepage.html">Diversity</a></li>
+                    <li><a href="somepage.html">Governance</a></li>
+                    <li><a href="somepage.html">Accessibility</a></li>
+                    <li><a href="somepage.html">Admissions</a></li>
+                    <li><a href="somepage.html">Diversity</a></li>
+                    <li><a href="somepage.html">Governance</a></li>
+                  </ul>
+                  <ul class="sub-nav-group">
+                    <li><a href="somepage.html">Contact Us</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="somepage.html" >Academics</a>
+                <div class="sub-nav">
+                  <ul class="sub-nav-group">
+                    <li><a href="somepage.html">Degree Programs</a></li>
+                    <li><a href="somepage.html">Faculty</a></li>
+                    <li><a href="somepage.html">Distance Learning</a></li>
+                    <li><a href="somepage.html">Libraries</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="somepage.html">Admissions</a>
+                <div class="sub-nav">
+                  <ul class="sub-nav-group">
+                    <li><a href="somepage.html">Undergraduate</a></li>
+                    <li><a href="somepage.html">Tuition</a></li>
+                    <li><a href="hsomepage.html">Financial Aid</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="somepage.html" >Visitors</a>
+                <div class="sub-nav">
+                  <ul class="sub-nav-group">
+                    <li><a href="somepage.html">Events</a></li>
+                    <li><a href="somepage.html">Campus Map</a></li>
+                    <li><a href="somepage.html">Parking</a></li>
+                    <li><a href="somepage.html">Events</a></li>
+                    <li><a href="somepage.html">Campus Map</a></li>
+                    <li><a href="somepage.html">Parking</a></li>
+                    <li><a href="somepage.html">Events</a></li>
+                    <li><a href="somepage.html">Campus Map</a></li>
+                    <li><a href="somepage.html">Parking</a></li>
+                    <li><a href="somepage.html">Events</a></li>
+                    <li><a href="somepage.html">Campus Map</a></li>
+                    <li><a href="somepage.html">Parking</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+
 
         <h3 id="hamburger">Hamburger Nav</h3>
 
@@ -383,7 +464,7 @@
         <h2>:focus-within</h2>
 
         <p>
-          Focus within hasn't got full browser support as of now (May 2018), so should be used either as a progressive enhancement
+          :focus-within hasn't got full browser support as of now (May 2018), so should be used either as a progressive enhancement
           or with a polyfill. The example below shows the form being styled with a blue border when the child input is focused.
           This can have loads of potential user case such as on drop down navigation menus and data tables.
         </p>
@@ -433,6 +514,8 @@
         </nav>
       </section>
 
+      <hr />
+
       <section id="pagination">
 
         <h2>Pagination</h2>
@@ -452,6 +535,9 @@
           </ul>
         </nav>
       </section>
+
+      <hr />
+
     </main>
   </div>
 
