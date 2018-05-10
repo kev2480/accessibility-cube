@@ -1,7 +1,15 @@
 .c-focus-within {
   &__form {
+    margin: 50px 0;
+    border-top: 6px solid $accent-color;
+    line-height: 1.6;
+    box-shadow: 5px 5px 10px 0px #a9b2bb;
+    padding: 15px;
+    transition: outline 0.3s ease-in-out;
+    outline: 3px solid transparent;
+
     &:focus-within {
-      outline: 2px solid $accent-color;
+      outline: 3px solid $accent-color;
     }
   }
 

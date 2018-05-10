@@ -46,9 +46,11 @@
             <a class="d-block c-sidebar__link" href="#tabbed-content">Tabbed Content</a>
             <a class="d-block c-sidebar__link" href="#carousel">Carousel</a>
             <a class="d-block c-sidebar__link" href="#navigation">Navigation</a>
-            <a class="d-block c-sidebar__link pl-5" href="#mega-menu">Menu Menu</a>
-            <a class="d-block c-sidebar__link pl-5" href="#hamburger">Hamburger</a>
+            <a class="d-block c-sidebar__link pl-4" href="#mega-menu">Menu Menu</a>
+            <a class="d-block c-sidebar__link pl-4" href="#hamburger">Hamburger</a>
             <a class="d-block c-sidebar__link" href="#focus-within">:focus-within</a>
+            <a class="d-block c-sidebar__link" href="#breadcrumb">Breadcrumb</a>
+            <a class="d-block c-sidebar__link" href="#pagination">Pagination</a>
           </div>
         </aside>
 
@@ -71,7 +73,7 @@
 
         <a href="https://accessibility.blog.gov.uk/2016/07/22/using-the-fieldset-and-legend-elements/" target="_blank" class="mb-4 d-block">Further reading about accessible forms</a>
 
-        <form role=”form”>
+        <form role=”form” class="c-form">
           <fieldset>
             <legend>Example order form</legend>
               <fieldset>
@@ -319,8 +321,8 @@
           Navigation info
         </p>
 
-        <nav role="navigation">
-          <ul class="list-inline">
+        <nav role="navigation" class="c-nav">
+          <ul class="list-inline pl-0 mb-0">
             <li class="list-inline-item"><a class="main-header__links" href="#">Home</a></li>
             <li class="list-inline-item"><a class="main-header__links" href="#">About Us</a></li>
             <li class="list-inline-item"><a class="main-header__links" href="#">Examples</a></li>
@@ -329,10 +331,14 @@
           </ul>
         </nav>
 
-        <h3 id="#mega-menu">Mega Menu</h3>
+        <h3 id="mega-menu">Mega Menu</h3>
 
-        <nav role="navigation">
-          <ul class="list-inline">
+        <p>
+          Mega menus can be frustating for many at the best of times, let alone if you rely on an assistive device to browse the web.
+        </p>
+
+        <nav role="navigation" class="c-mega-menu">
+          <ul class="list-inline pl-0 mb-0">
             <li class="list-inline-item"><a class="main-header__links" href="…">Home</a></li>
             <li class="list-inline-item">
               <a class="main-header__links" href="#">About Us</a>
@@ -354,11 +360,11 @@
         </p>
 
         <header class="c-hamburger">
-          <h1>
+          <h1 class="c-hamburger__title">
             <a href="#">Logo</a>
           </h1>
 
-          <nav role="navigation">
+          <nav role="navigation" class="c-hamburger__links">
             <button id="toggleHamburger" aria-expanded="false">Menu</button>
             <ul id="hammenu">
               <li><a href="#">Home</a></li>
@@ -385,13 +391,67 @@
         <a href="https://caniuse.com/#feat=css-focus-within" target="_blank" class="d-block mb-3">https://caniuse.com/#feat=css-focus-within</a>
         <a href="https://github.com/scottaohara/css-focus-within-demos" target="_blank" class="d-block mb-3">Focus-Within demos on GitHub</a>
         <form class="c-focus-within__form">
-          <label class="c-focus-within__label" for="focus">Focus within example</label>
-          <input type="text" class="c-focus-within__input" id="focus" name="focus" placeholder="Focus this input"/>
+          <fieldset>
+            <legend>Form with focus-within</legend>
+            <label class="c-focus-within__label" for="focus">Text input label</label>
+            <input type="text" class="c-focus-within__input" id="focus" name="focus" placeholder="Focus this input"/>
+          </fieldset>
         </form>
 
       </section>
 
       <hr />
+
+      <section id="breadcrumb">
+
+        <h2>Breadcrumb</h2>
+
+        <p>
+          Breadcrumb menus could be confusing for people who rely on screen readers so it is important to add an aria-label="breadcrumb" to the nav,
+          to let the screen reader know what it is and announce it to the user. It is also important to add aria-current="page" to the last element, so that when it is read out, 'current page'
+          is appended to it. eg, "About, current page". I have also used an ordered list as these links are meant to be represented in a hierarchical structure
+        </p>
+
+        <nav class="breadcrumb-nav c-breadcrumb" aria-label="breadcrumb">
+          <ol class="o-list-inline pl-0 mb-0">
+            <li class="o-list-inline__item">
+              <a href="#">
+                Index
+              </a>
+            </li>
+            <li class="o-list-inline__item">
+              <a href="#">
+                Sub Page
+              </a>
+            </li>
+            <li class="o-list-inline__item">
+              <a href="#" aria-current="page">
+                Current Sub Page
+              </a>
+            </li>
+          </ol>
+        </nav>
+      </section>
+
+      <section id="pagination">
+
+        <h2>Pagination</h2>
+
+        <p>
+          Pagination can have similar issues to breadcrumbs, so it is important to use aria tags to help screen readers interpret the content.
+          With the aria-label on each link, the SR will say 'link, go to page 2' rather than 'link, 2' which may be difficult to understand with no context.
+        </p>
+
+        <nav role="navigation" aria-label="Pagination" class="c-pagination">
+          <ul class="o-list-inline pl-0 mb-0">
+            <li class="o-list-inline__item"><a class="c-pagination__item" href="#" aria-current="true" aria-label="Go to page 1, Current Page">1</a></li>
+            <li class="o-list-inline__item"><a class="c-pagination__item" href="#" aria-label="Go to page 2">2</a></li>
+            <li class="o-list-inline__item"><a class="c-pagination__item" href="#" aria-label="Go to page 3">3</a></li>
+            <li class="o-list-inline__item"><a class="c-pagination__item" href="#" aria-label="Go to page 4">4</a></li>
+            <li class="o-list-inline__item"><a class="c-pagination__item" href="#" aria-label="Go to page 5">5</a></li>
+          </ul>
+        </nav>
+      </section>
     </main>
   </div>
 

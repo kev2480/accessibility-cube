@@ -1,11 +1,11 @@
 .c-hamburger {
   position: relative;
+  display: block;
 
   a {
     text-decoration: none;
   }
 
-    // background: #015289;
     margin: 50px 0;
     border-top: 6px solid $accent-color;
     line-height: 1.6;
@@ -26,7 +26,7 @@
   button {
     position: absolute;
     right: 1em;
-    top: 0.8em;
+    top: 27px;
     padding: 8px;
     border: 2px solid $accent-color;
     border-radius: 5px;
@@ -47,17 +47,35 @@
     border-top: 1px solid transparentize(#fff, 0.4);
     padding: 1em 1em 0;
 
+    @media screen and (max-width: 700px) {
+      padding: 0;
+    }
+
     li {
-      margin-bottom: 1em;
+
+      &:nth-child(even) a {
+        @media screen and (max-width: 700px) {
+          background-color: $offwhite;
+        }
+      }
+
     }
 
     a {
       display: block;
+      padding: 0.5em;
+
+      &:focus,
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
   ul {
     display: none;
+    list-style-type: none;
+    padding-left: 0;
   }
 
   button {
@@ -71,6 +89,8 @@
 
 @media (min-width: 700px) {
   .c-hamburger {
+    display: flex;
+    justify-content: space-between;
     ul {
       display: block;
     }
@@ -84,7 +104,6 @@
     }
 
     nav {
-      padding-left: 0;
 
       li {
         display: inline-block;

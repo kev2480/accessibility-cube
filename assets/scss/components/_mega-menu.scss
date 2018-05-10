@@ -1,0 +1,17 @@
+.c-mega-menu {
+  margin: 50px 0;
+  border-top: 6px solid $accent-color;
+  line-height: 1.6;
+  box-shadow: 5px 5px 10px 0px #a9b2bb;
+  padding: 1em;
+
+  a {
+    color: $black;
+
+    &:hover,
+    &:focus {
+      color: $black;
+      text-decoration: underline;
+    }
+  }
+}
