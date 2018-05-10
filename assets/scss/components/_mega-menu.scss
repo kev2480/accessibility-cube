@@ -4,161 +4,140 @@
   line-height: 1.6;
   box-shadow: 5px 5px 10px 0px #a9b2bb;
   padding: 1em;
-}
-
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
-
-* { font-family: 'Open-Sans', sans-serif; }
 
 
+  /* mega menu list */
+    .nav-menu {
+      display: block;
+      position: relative;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      z-index: 15;
+    }
+
+    /* a top level navigation item in the mega menu */
+    .nav-item {
+      list-style: none;
+      display: inline-block;
+      padding: 0;
+      margin: 0;
+    }
+
+    /* first descendant link within a top level navigation item */
+    .nav-item > a {
+      position: relative;
+      display: inline-block;
+      padding: 0.5em 1em;
+      margin: 0 0 -1px 0;
+    }
 
 
-/* mega menu list */
-  .nav-menu {
-    display: block;
-    position: relative;
-    list-style: none;
-    margin: 0;
+    /* open state of first descendant link within a top level
+    navigation item */
+    .nav-item > a.open {
+      z-index: 1;
+    }
+
+    /* sub-navigation panel */
+    .sub-nav {
+      position: absolute;
+      display: none;
+      top: 2.6em;
+      margin-top: -1px;
+      border: 1px solid #dedede;
+    }
+
+    /* sub-navigation panel open state */
+    .sub-nav.open {
+      display: block;
+    }
+
+    /* list of items within sub-navigation panel */
+    .sub-nav ul {
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    /* list item within sub-navigation panel */
+    .sub-nav li {
+      display: block;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+
+
+
+
+
+  ul.nav-menu {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: none;
+    box-shadow: none;
+    margin: 0 auto;
     padding: 0;
-    z-index: 15;
-  }
-
-  /* a top level navigation item in the mega menu */
-  .nav-item {
-    list-style: none;
-    display: inline-block;
-    padding: 0;
-    margin: 0;
-  }
-
-  /* first descendant link within a top level navigation item */
-  .nav-item > a {
     position: relative;
-    display: inline-block;
-    padding: 0.5em 1em;
-    margin: 0 0 -1px 0;
-    border: 1px solid transparent;
   }
-
-  /* focus/open states of first descendant link within a top level
-  navigation item */
-  .nav-item > a:focus,
-  .nav-item > a.open {
-    border: 1px solid #dedede;
+  li.nav-item > a {
+    color: #000;
+    float: left;
+    font-size: 1.15em;
+    padding: 8px;
   }
-
-  /* open state of first descendant link within a top level
-  navigation item */
-  .nav-item > a.open {
-    border-bottom: none;
-    z-index: 1;
-  }
-
-  /* sub-navigation panel */
   .sub-nav {
-    position: absolute;
-    display: none;
-    top: 2.6em;
-    margin-top: -1px;
-    padding: 0.5em 1em;
-    border: 1px solid #dedede;
-    /* background-color: #fff; */
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: $white;
+    z-index: 1;
+    box-shadow: 5px 5px 10px 0px #a9b2bb;
+    margin: -1px 0 0;
+  }
+  .sub-nav-group {
+    float: left;
+    padding: 20px;
   }
 
-  /* sub-navigation panel open state */
-  .sub-nav.open {
+  .sub-nav ul li {
+    list-style: none outside none;
+    margin-left: 0;
+
+    &:not(:last-child) a {
+      border-bottom: 1px solid $offwhite;
+    }
+  }
+  .sub-nav a {
+    color: #3C3C3C;
     display: block;
+    font-size: 105%;
+    padding: 10px 5px;
+    min-width: 200px;
+    line-height: 21px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   }
-
-  /* list of items within sub-navigation panel */
-  .sub-nav ul {
-    display: inline-block;
-    vertical-align: top;
-    margin: 0 1em 0 0;
-    padding: 0;
-  }
-
-  /* list item within sub-navigation panel */
-  .sub-nav li {
-    display: block;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-
-
-
-
-
-
-.c-mega-menu ul.nav-menu {
-  background-color: rgba(0, 0, 0, 0);
-  background-image: none;
-  box-shadow: none;
-  margin: 0 auto;
-  padding: 0;
-  position: relative;
-  // width: 995px;
-}
-.c-mega-menu li.nav-item > a {
-  color: #000;
-  float: left;
-  font-size: 1.15em;
-  padding: 9px 9px 17px;
-}
-.c-mega-menu .sub-nav {
-  -moz-border-bottom-colors: none;
-  -moz-border-left-colors: none;
-  -moz-border-right-colors: none;
-  -moz-border-top-colors: none;
-  background-color: $white;
-  z-index: 1;
-  box-shadow: 1px 1px 5px #808080;
-  margin: -1px 0 0;
-}
-.c-mega-menu .sub-nav-group {
-  float: left;
-  padding: 20px 0 20px 20px;
-}
-
-.c-mega-menu .sub-nav ul li {
-  list-style: none outside none;
-  margin-bottom: 5px;
-  margin-left: 0;
-  padding-left: 12px;
-}
-.c-mega-menu .sub-nav a {
-  border-bottom: 1px solid #F1F1F1;
-  color: #3C3C3C;
-  display: block;
-  font-size: 105%;
-  margin: 0 30px 3px 0;
-  min-width: 200px;
-  padding: 0 10px 3px 7px;
-  line-height: 21px;
-}
-.c-mega-menu a {
-  text-decoration: none;
-}
-.c-mega-menu li.nav-item > a:hover,
-.c-mega-menu li.nav-item > a:focus,
-.c-mega-menu li.nav-item > a.open  {
-  background: transparent;
-  text-decoration: underline;
-}
-.c-mega-menu .sub-nav a:hover,
-.c-mega-menu .sub-nav a:focus {
-  background-color: $accent-color;
-  color: #FFFFFF;
-}
-
-
-.c-mega-menu {
-  a:hover,
-  a:focus,
-  a:active {
-    border-color: $accent-color;
-    color: white;
+  a {
     text-decoration: none;
   }
+  li.nav-item > a:hover,
+  li.nav-item > a:focus,
+  li.nav-item > a.open  {
+    background: transparent;
+    text-decoration: underline;
+  }
+  .sub-nav a:hover,
+  .sub-nav a:focus {
+    background-color: $accent-color;
+    color: #FFFFFF;
+  }
+
+
+    a:hover,
+    a:focus,
+    a:active {
+      color: white;
+      text-decoration: none;
+    }
 }

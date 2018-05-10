@@ -6,7 +6,7 @@
   padding: 1em;
 
   a[aria-current="true"] {
-    background: #000;
+    background: $accent-color;
     color: #fff;
   }
 
