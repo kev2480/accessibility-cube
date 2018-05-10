@@ -17,7 +17,8 @@
     color: $grey;
     border-right: 1px solid $offwhite;
     background-color: $white;
-    transition: 0.3s background-color ease-in-out;
+    transition: 0.3s background-color ease-in-out, 0.3s border-left-color ease-in-out;
+    border-left: 4px solid transparent;
 
     @media screen and (max-width: $md) {
       border-right: none;
@@ -28,6 +29,7 @@
     &:focus {
       color: $grey;
       background-color: #f7f7f7;
+      border-left-color: $accent-color;
     }
   }
 }

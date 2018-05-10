@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="title" content="Basic Sass Boilerplate" />
-    <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto|Poppins" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	  <link href="assets/css/app.css" rel="stylesheet" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -40,12 +40,12 @@
 
     <aside role="complementary" class="c-sidebar o-grid-sidebar sidebar">
           <div class="c-sidebar__inner">
-            <h2>Quick Links:</h2>
+            <h2 class="u-heading-font">Quick Links:</h2>
             <a class="d-block c-sidebar__link" href="#form">Form</a>
             <a class="d-block c-sidebar__link" href="#accordion">Accordion</a>
             <a class="d-block c-sidebar__link" href="#skip-link">Skip Link</a>
             <a class="d-block c-sidebar__link" href="#tabbed-content">Tabbed Content</a>
-            <a class="d-block c-sidebar__link" href="#page">Modal</a>
+            <a class="d-block c-sidebar__link" href="#modal">Modal</a>
             <a class="d-block c-sidebar__link" href="#carousel">Carousel</a>
             <a class="d-block c-sidebar__link" href="#navigation">Navigation</a>
             <a class="d-block c-sidebar__link pl-4" href="#mega-menu">Mega Menu</a>
@@ -59,7 +59,7 @@
     <main class="o-grid-content " id="content" role=”main”>
 
       <section id="form">
-        <h2>Form Example</h2>
+        <h2 class="u-heading-font">Form Example</h2>
 
         <p>
           Forms can be very difficult to understand if the mark-up isn't semantic and the labels don't give enough context.
@@ -146,7 +146,7 @@
       <hr />
 
       <section id="accordion">
-        <h2>Accordion</h2>
+        <h2 class="u-heading-font">Accordion</h2>
 
         <p>
           Accordions can be tricky for some users who may use screen readers or assisstive tech to navigate websites.
@@ -212,7 +212,7 @@
       <hr />
 
       <section class="position-relative" id="skip-link">
-        <h2>Skip link</h2>
+        <h2 class="u-heading-font">Skip link</h2>
 
         <p>
           There is an example at the very top of this page and underneath this text.
@@ -225,7 +225,7 @@
       <hr />
 
       <section id="tabbed-content">
-        <h2>Tabbed content</h2>
+        <h2 class="u-heading-font">Tabbed content</h2>
 
         <p>
           Like accordions, tabs can be frustrating for many users. The below example uses semantic mark-up and aria tags to help aid those who use assistive tech and/or screen readers.
@@ -261,8 +261,8 @@
 
       <hr />
 
-      <section id="page">
-        <h2>Modal</h2>
+      <section id="modal">
+        <h2 class="u-heading-font">Modal</h2>
 
         <p>
           Modals can be problematic for some users.
@@ -281,7 +281,7 @@
 
           <div class="modal-content" id="modal_holder" role="document">
 
-              <h1 id="modal_title">Modal Title</h1>
+              <h1 id="modal_title" class="u-heading-font">Modal Title</h1>
               <form>
                 <label for="name">Name:</label>
                 <input type="text" id="name" class="form__input mb-4" placeholder="Enter your name" />
@@ -299,14 +299,12 @@
           </div>
 
         </div>
-
-        <a href="modal-source.html" class="d-block mt-4">View modal source</a>
       </section>
 
       <hr />
 
       <section class="position-relative" id="carousel">
-        <h2>Carousel</h2>
+        <h2 class="u-heading-font">Carousel</h2>
 
         <p>
           There's many articles out there that suggest to not use carousels due to accessibility concerns.
@@ -317,7 +315,7 @@
       <hr />
 
       <section id="navigation">
-        <h2>Navigation</h2>
+        <h2 class="u-heading-font">Navigation</h2>
 
         <p>
           The key thing with standard navigation menus is to ensure that you are using semantic mark-up.
@@ -333,101 +331,75 @@
           </ul>
         </nav>
 
-        <h3 id="mega-menu">Mega Menu</h3>
+        <h3 id="mega-menu" class="u-heading-font">Mega Menu</h3>
 
         <p>
           Mega menus can be frustating for many at the best of times, let alone if you rely on an assistive device to browse the web.
           The below example is using the Adobe guide: <a href="https://github.com/adobe-accessibility/Accessible-Mega-Menu/" target="_blank">Adobe Accessible Mega Menu on GitHub</a>
         </p>
 
-        <!-- <nav role="navigation" class="c-mega-menu">
-          <ul class="list-inline pl-0 mb-0">
-            <li class="list-inline-item"><a class="main-header__links" href="…">Home</a></li>
-            <li class="list-inline-item">
-              <a class="main-header__links" href="#">About Us</a>
-              <div class="c-mega-menu__sub-nav">
-                <ul class="list-inline">
-                  <li class="list-inline-item"><a class="main-header__links" href="#">sub menu</a></li>
-                  <li class="list-inline-item"><a class="main-header__links" href="#">sub menu link</a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="list-inline-item"><a class="main-header__links" href="#">Examples</a></li>
-            <li class="list-inline-item"><a class="main-header__links" href="#">Another example</a></li>
-            <li class="list-inline-item"><a class="main-header__links" href="#">Yet another example</a></li>
-          </ul>
-        </nav> -->
-        <nav id="dawgdrops" class="c-mega-menu">
+        <nav class="c-mega-menu">
             <ul class="nav-menu">
               <li class="nav-item">
-                <a href="somepage.html">About</a>
+                <a href="somepage.html">About Us</a>
                 <div class="sub-nav">
                   <ul class="sub-nav-group">
-                    <li><a href="somepage.html">Accessibility</a></li>
-                    <li><a href="somepage.html">Admissions</a></li>
-                    <li><a href="somepage.html">Diversity</a></li>
-                    <li><a href="somepage.html">Governance</a></li>
+                    <li><a href="somepage.html">Dummy Content</a></li>
+                    <li><a href="somepage.html">Test Content</a></li>
+                    <li><a href="somepage.html">Dummy Content</a></li>
+                    <li><a href="somepage.html">Test Content</a></li>
                   </ul>
                   <ul class="sub-nav-group">
-                    <li><a href="somepage.html">Leadership</a></li>
-                    <li><a href="somepage.html">Mission Statement</a></li>
-                    <li><a href="somepage.html">Research</a></li>
-                    <li><a href="somepage.html">Teaching</a></li>
-                    <li><a href="somepage.html">Accessibility</a></li>
-                    <li><a href="somepage.html">Admissions</a></li>
-                    <li><a href="somepage.html">Diversity</a></li>
-                    <li><a href="somepage.html">Governance</a></li>
-                    <li><a href="somepage.html">Accessibility</a></li>
-                    <li><a href="somepage.html">Admissions</a></li>
-                    <li><a href="somepage.html">Diversity</a></li>
-                    <li><a href="somepage.html">Governance</a></li>
-                    <li><a href="somepage.html">Accessibility</a></li>
-                    <li><a href="somepage.html">Admissions</a></li>
-                    <li><a href="somepage.html">Diversity</a></li>
-                    <li><a href="somepage.html">Governance</a></li>
+                    <li><a href="somepage.html">Dummy Content</a></li>
+                    <li><a href="somepage.html">Test Content</a></li>
+                    <li><a href="somepage.html">Dummy Content</a></li>
+                    <li><a href="somepage.html">Test Content</a></li>
+                    <li><a href="somepage.html">Dummy Content</a></li>
+                    <li><a href="somepage.html">Test Content</a></li>
+                    <li><a href="somepage.html">Dummy Content</a></li>
+                    <li><a href="somepage.html">Test Content</a></li>
+                    <li><a href="somepage.html">Dummy Content</a></li>
+                    <li><a href="somepage.html">Test Content</a></li>
+                    <li><a href="somepage.html">Dummy Content</a></li>
                   </ul>
                   <ul class="sub-nav-group">
-                    <li><a href="somepage.html">Contact Us</a></li>
+                    <li><a href="somepage.html">Test Content</a></li>
                   </ul>
                 </div>
               </li>
               <li class="nav-item">
-                <a href="somepage.html" >Academics</a>
+                <a href="somepage.html" >Example links</a>
                 <div class="sub-nav">
                   <ul class="sub-nav-group">
-                    <li><a href="somepage.html">Degree Programs</a></li>
-                    <li><a href="somepage.html">Faculty</a></li>
-                    <li><a href="somepage.html">Distance Learning</a></li>
-                    <li><a href="somepage.html">Libraries</a></li>
+                    <li><a href="somepage.html">Test Content</a></li>
+                    <li><a href="somepage.html">Dummy Content</a></li>
+                    <li><a href="somepage.html">Test Content</a></li>
+                    <li><a href="somepage.html">Dummy Content</a></li>
                   </ul>
                 </div>
               </li>
               <li class="nav-item">
-                <a href="somepage.html">Admissions</a>
+                <a href="somepage.html">More example links</a>
                 <div class="sub-nav">
                   <ul class="sub-nav-group">
-                    <li><a href="somepage.html">Undergraduate</a></li>
-                    <li><a href="somepage.html">Tuition</a></li>
-                    <li><a href="hsomepage.html">Financial Aid</a></li>
+                    <li><a href="somepage.html">Test Content</a></li>
+                    <li><a href="somepage.html">Dummy Content</a></li>
+                    <li><a href="somepage.html">Test Content</a></li>
                   </ul>
                 </div>
               </li>
               <li class="nav-item">
-                <a href="somepage.html" >Visitors</a>
+                <a href="somepage.html" >More examples</a>
                 <div class="sub-nav">
                   <ul class="sub-nav-group">
-                    <li><a href="somepage.html">Events</a></li>
-                    <li><a href="somepage.html">Campus Map</a></li>
-                    <li><a href="somepage.html">Parking</a></li>
-                    <li><a href="somepage.html">Events</a></li>
-                    <li><a href="somepage.html">Campus Map</a></li>
-                    <li><a href="somepage.html">Parking</a></li>
-                    <li><a href="somepage.html">Events</a></li>
-                    <li><a href="somepage.html">Campus Map</a></li>
-                    <li><a href="somepage.html">Parking</a></li>
-                    <li><a href="somepage.html">Events</a></li>
-                    <li><a href="somepage.html">Campus Map</a></li>
-                    <li><a href="somepage.html">Parking</a></li>
+                    <li><a href="somepage.html">Dummy Content</a></li>
+                    <li><a href="somepage.html">Test Content</a></li>
+                    <li><a href="somepage.html">Dummy Content</a></li>
+                    <li><a href="somepage.html">Test Content</a></li>
+                    <li><a href="somepage.html">Dummy Content</a></li>
+                    <li><a href="somepage.html">Test Content</a></li>
+                    <li><a href="somepage.html">Dummy Content</a></li>
+                    <li><a href="somepage.html">Test Content</a></li>
                   </ul>
                 </div>
               </li>
@@ -435,7 +407,7 @@
           </nav>
 
 
-        <h3 id="hamburger">Hamburger Nav</h3>
+        <h3 id="hamburger" class="u-heading-font">Hamburger Nav</h3>
 
         <p>
           Below is an example of a responsive, accessible hamburger nav.
@@ -462,7 +434,7 @@
       <hr />
 
       <section id="focus-within">
-        <h2>:focus-within</h2>
+        <h2 class="u-heading-font">:focus-within</h2>
 
         <p>
           :focus-within hasn't got full browser support as of now (May 2018), so should be used either as a progressive enhancement
@@ -486,7 +458,7 @@
 
       <section id="breadcrumb">
 
-        <h2>Breadcrumb</h2>
+        <h2 class="u-heading-font">Breadcrumb</h2>
 
         <p>
           Breadcrumb menus could be confusing for people who rely on screen readers so it is important to add an aria-label="breadcrumb" to the nav,
@@ -519,7 +491,7 @@
 
       <section id="pagination">
 
-        <h2>Pagination</h2>
+        <h2 class="u-heading-font">Pagination</h2>
 
         <p>
           Pagination can have similar issues to breadcrumbs, so it is important to use aria tags to help screen readers interpret the content.

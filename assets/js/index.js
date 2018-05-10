@@ -160,7 +160,7 @@ $(function() {
   // helper function to place modal window as the first child
   // of the #page node
   var m = document.getElementById('modal_window'),
-      p = document.getElementById('page');
+      p = document.getElementById('modal');
 
   function swap () {
     p.parentNode.insertBefore(m, p);
@@ -264,47 +264,50 @@ $(function() {
     } else {
       menu.classList.add('is-active');
       this.setAttribute('aria-expanded', 'true');
-      //menuItems[0].focus();
     }
   });
 });
 
+/*
+    below are for the component library only - not accessibility patterns.
+*/
+
 // sticky sidebar
-$(function() {
-  if( $(window).innerWidth() > 768) {
-    var sidebar = new StickySidebar('.sidebar', {
-      topSpacing: 50,
-      bottomSpacing: 20,
-      containerSelector: '.sidebar',
-      innerWrapperSelector: '.c-sidebar__inner'
-    });
-  }
-
-});
-
-//
-// to top right away
-if ( window.location.hash ) scroll(0,0);
-// void some browsers issue
-setTimeout( function() { scroll(0,0); }, 1);
-
-$(function() {
-
-    // your current click function
-    $('.c-sidebar__link').on('click', function(e) {
-        e.preventDefault();
-        $('html, body').animate({
-            scrollTop: $($(this).attr('href')).offset().top + 'px'
-        }, 1000, 'swing');
-    });
-
-    // *only* if we have anchor on the url
-    if(window.location.hash) {
-
-        // smooth scroll to the anchor id
-        $('html, body').animate({
-            scrollTop: $(window.location.hash).offset().top + 'px'
-        }, 1000, 'swing');
+  $(function() {
+    if( $(window).innerWidth() > 768) {
+      var sidebar = new StickySidebar('.sidebar', {
+        topSpacing: 50,
+        bottomSpacing: 20,
+        containerSelector: '.sidebar',
+        innerWrapperSelector: '.c-sidebar__inner'
+      });
     }
 
-});
+  });
+
+// smooth scrolling
+  // to top right away
+  if ( window.location.hash ) scroll(0,0);
+  // void some browsers issue
+  setTimeout( function() { scroll(0,0); }, 1);
+
+  $(function() {
+
+      // your current click function
+      $('.c-sidebar__link').on('click', function(e) {
+          e.preventDefault();
+          $('html, body').animate({
+              scrollTop: $($(this).attr('href')).offset().top + 'px'
+          }, 1000, 'swing');
+      });
+
+      // *only* if we have anchor on the url
+      if(window.location.hash) {
+
+          // smooth scroll to the anchor id
+          $('html, body').animate({
+              scrollTop: $(window.location.hash).offset().top + 'px'
+          }, 1000, 'swing');
+      }
+
+  });
