@@ -53,6 +53,7 @@
             <a class="d-block c-sidebar__link" href="#focus-within">:focus-within</a>
             <a class="d-block c-sidebar__link" href="#breadcrumb">Breadcrumb</a>
             <a class="d-block c-sidebar__link" href="#pagination">Pagination</a>
+            <a class="d-block c-sidebar__link" href="#tooltip">Tooltip</a>
           </div>
         </aside>
 
@@ -507,6 +508,25 @@
             <li class="o-list-inline__item"><a class="c-pagination__item" href="#" aria-label="Go to page 5">5</a></li>
           </ul>
         </nav>
+      </section>
+
+      <hr />
+
+      <section id="tooltip">
+        <h2 class="u-heading-font">Tooltip</h2>
+
+        <p>
+          Tooltips can be extremely bad for accessibility, there's many tooltips out there they are only shown on hover.
+          This prevents screenreaders, keyboard only users and even mobile users from accessing the conent.
+
+          The below tooltip is activated on both hover and focus. <i>This tooltip is not perfect as screen readers can only read the content on focus, not hover.</i>
+        </p>
+
+        <p>Do you like <span data-tooltip="this is a nice tooltip" tabindex="0">tooltips</span>? </p>
+        <p>You can also align the tooltip in different positions <span data-tooltip="oh hey" data-side="bottom" tabindex="0">like this one</span>.</p>
+
+
+
       </section>
 
       <hr />

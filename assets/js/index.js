@@ -158,7 +158,7 @@ $(function() {
 $(function() {
 
   // helper function to place modal window as the first child
-  // of the #page node
+  // of the #modal node
   var m = document.getElementById('modal_window'),
       p = document.getElementById('modal');
 
